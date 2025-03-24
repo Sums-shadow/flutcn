@@ -1,19 +1,18 @@
-import 'package:ansicolor/ansicolor.dart';
+import 'dart:developer' as developer;
+
+
 
 class Logger {
-  static final _errorPen = AnsiPen()..red();
-  static final _successPen = AnsiPen()..green();
-  static final _infoPen = AnsiPen()..blue();
-
+ 
   static void error(String message) {
-    print(_errorPen('ERROR: $message'));
+    developer.log(message, error: true);
   }
 
   static void success(String message) {
-    print(_successPen('SUCCESS: $message'));
+    developer.log(message);
   }
 
   static void info(String message) {
-    print(_infoPen('INFO: $message'));
+    developer.log(message);
   }
 }

@@ -50,7 +50,7 @@ class AddCommand extends Command {
       dir.createSync(recursive: true);
     }
 
-    final filePath = path.join(outputDir, '${componentName}.dart');
+    final filePath = path.join(outputDir, '$componentName.dart');
     if (File(filePath).existsSync()) {
       throw 'Component already exists at $filePath';
     }
